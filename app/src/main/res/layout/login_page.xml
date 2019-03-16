@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light">
+    android:background="@drawable/bkgd"
+    android:scaleY="1.17"
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/ic_book_black_24dp"
-        android:background="@android:color/white"
-        android:scaleType="fitCenter"/>
+    >
+
+
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Enter Email"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginTop="80dp"
-        android:id="@+id/login_email"/>
+        android:layout_marginBottom="6dp"
+        android:id="@+id/login_email"
+        android:layout_above="@id/login_password"
+        />
     <EditText
         android:layout_width="match_parent"
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/login_password"/>
-    <Button
-        android:onClick="login"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:text="Log_In"
-        android:textSize="20sp"
-        android:id="@+id/login_login"/>
+        android:id="@+id/login_password"
+        android:layout_above="@+id/login_login"
+
+        />
+
     <TextView
         android:onClick="signup_screen"
         android:layout_width="match_parent"
@@ -46,4 +46,20 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:id="@+id/login_signup"/>
-</LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="login"
+        android:padding="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/component"
+        android:layout_alignParentBottom="true"
+
+        android:scaleY="0.82"
+        android:scaleX="0.9"
+        android:id="@+id/login_login"
+        />
+</RelativeLayout>
