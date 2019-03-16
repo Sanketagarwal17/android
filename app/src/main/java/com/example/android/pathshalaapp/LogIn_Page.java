@@ -32,22 +32,31 @@ public class LogIn_Page extends AppCompatActivity {
     public void login(View view) {
         String user = username.getText().toString().trim();
         String pass = password.getText().toString().trim();
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loading");
-        progressDialog.show();
 
-        firebaseAuth.signInWithEmailAndPassword(user, pass)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        if (task.isSuccessful()) {
-                            Toast.makeText(LogIn_Page.this, "Logged In", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LogIn_Page.this,Sample.class));
-                        } else
-                            Toast.makeText(LogIn_Page.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+        if(user==null || pass==null)
+        {
+            Toast.makeText(this,"Empty Field",Toast.LENGTH_SHORT).show();
+            username.requestFocus();
+            password.requestFocus();
+        }
+        else {
+            final ProgressDialog progressDialog = new ProgressDialog(this);
+            progressDialog.setMessage("Loading");
+            progressDialog.show();
+
+            firebaseAuth.signInWithEmailAndPassword(user, pass)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressDialog.dismiss();
+                            if (task.isSuccessful()) {
+                                Toast.makeText(LogIn_Page.this, "Logged In", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(LogIn_Page.this, HomeActivity.class));
+                            } else
+                                Toast.makeText(LogIn_Page.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
     }
 
     public void signup_screen(View view) {
