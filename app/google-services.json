@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "199958086585",
+    "firebase_url": "https://teachers-database.firebaseio.com",
+    "project_id": "teachers-database",
+    "storage_bucket": "teachers-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199958086585:android:cafbffbff93e2e7e",
+        "android_client_info": {
+          "package_name": "com.example.android.pathshalaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199958086585-ti49klqg2tjjp2sqm25np24m0i8nog2n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.pathshalaapp",
+            "certificate_hash": "5cb9df8ee8a976572adaab3240a84ee6a3b9e2b8"
+          }
+        },
+        {
+          "client_id": "199958086585-so4pti63hd8s2rtrmd399kji7r3tsq4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcHs73UhDlz-eb3FkqpnIcREdKFAVCeqw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199958086585-so4pti63hd8s2rtrmd399kji7r3tsq4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
